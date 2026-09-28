@@ -86,15 +86,14 @@ void jatek2(int param1, int param2){
 }
 
 void kockadobalas(){
-    int T[1000];
     int x;
     int y;
-    int osszes[10] = {0,0,0,0,0,0,0,0,0,0};
+    int osszes[12] = {0,0,0,0,0,0,0,0,0,0,0,0};
     for (int i = 0; i < 1000; i++){
         x = rand()%6+1; //dobokocka1
         y = rand()%6+1; //dobokocka2
-        T[i] = x+y;
-        switch(x+y){
+        osszes[x+y-2]++;
+        /*switch(x+y){
             case 2:
             osszes[0]++;
             break;
@@ -128,9 +127,9 @@ void kockadobalas(){
             case 12:
             osszes[10]++;
             break;
-        }
+        }*/
     }
-    for(int i = 0; i < 12; i++){
+    for(int i = 0; i <= 12; i++){
         printf("%d szam: %d\n", i+1, osszes[i]);
     }
 }
