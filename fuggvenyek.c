@@ -130,8 +130,8 @@ void kockadobalas(){
             break;
         }
     }
-    for(int i = 1; i <= 12; i++){
-        printf("%d szam: %d\n", i, osszes[i]);
+    for(int i = 0; i < 12; i++){
+        printf("%d szam: %d\n", i+1, osszes[i]);
     }
 }
 
